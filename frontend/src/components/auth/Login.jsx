@@ -31,9 +31,9 @@ function Login() {
 
       <div className="hidden lg:block w-px self-stretch my-10" style={{ background: "rgba(255,255,255,0.05)" }} />
 
-      <div className="w-[50%] flex items-center justify-center pl-16 pr-20 py-14">
-        <div className="w-full max-w-[400px] flex flex-col gap-8">
-          <div className="lg:hidden">
+      <div className="w-full lg:w-[50%] flex items-center justify-center px-5 py-6 sm:px-6 lg:px-16 lg:py-14">
+        <div className="w-full max-w-[430px] flex flex-col gap-4 sm:gap-5">
+          <div className="lg:hidden text-center">
             <span className="text-white text-2xl font-semibold" style={{ letterSpacing: "-0.5px" }}>finora</span>
           </div>
 
@@ -105,7 +105,10 @@ function Login() {
 
             <button
               className="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl text-sm font-medium text-white transition-all active:scale-[0.98] cursor-pointer"
-              style={{ background: "#0f0f0f", border: "1px solid rgba(255,255,255,0.08)" }}
+              style={{
+                background: "#0f0f0f",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
             >
               <GoogleIcon />
               Continuar con Google
