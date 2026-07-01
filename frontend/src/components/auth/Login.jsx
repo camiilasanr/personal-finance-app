@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -133,9 +134,12 @@ function Login() {
 
         <p className="text-center text-xs text-[#6060aa]">
           ¿No tienes cuenta?{" "}
-          <a href="#" className="font-medium text-[#5b7cf6] hover:underline">
+          <Link
+            to="/register"
+            className="font-medium text-[#5b7cf6] hover:underline"
+          >
             Crear cuenta
-          </a>
+        </Link>
         </p>
       </div>
     </div>
