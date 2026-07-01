@@ -1,11 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  background: #020617;
+  background: #090909;
   color: white;
   font-family: Inter, system-ui, sans-serif;
 }
 
 body {
   margin: 0;
+  background: #090909;
+}
+
+/* Animación del texto del Login */
+
+@keyframes finoraReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-login-line-1 {
+  opacity: 0;
+  animation: finoraReveal 0.9s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.animate-login-line-2 {
+  opacity: 0;
+  animation: finoraReveal 0.9s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.animate-login-line-3 {
+  opacity: 0;
+  animation: finoraReveal 0.9s ease-out forwards;
+  animation-delay: 0.8s;
 }
