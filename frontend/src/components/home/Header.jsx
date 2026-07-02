@@ -1,4 +1,5 @@
 import { Bell } from "lucide-react";
+import { colors } from "../../design-system";
 
 export default function Header() {
     return (
@@ -8,12 +9,12 @@ export default function Header() {
                     className="text-3xl font-semibold text-white"
                     style={{ letterSpacing: "-0.8px" }}
                 >
-                    Buenos días, Laura 👋
+                    Buenos días, Laura
                 </h1>
 
                 <p
                     className="mt-2 text-sm"
-                    style={{ color: "#A1A1AA" }}
+                    style={{ color: colors.textSecondary }}
                 >
                     Todo está bajo control. Tus finanzas van por buen camino.
                 </p>
@@ -31,10 +32,10 @@ export default function Header() {
             transition-all
             duration-200
             hover:scale-105
-          "
+            "
                     style={{
-                        background: "#161616",
-                        border: "1px solid rgba(255,255,255,.05)",
+                        background: colors.surface,
+                        border: `1px solid ${colors.border}`,
                     }}
                 >
                     <Bell
@@ -58,8 +59,8 @@ export default function Header() {
             hover:scale-105
         "
                     style={{
-                        background: "#FF5C00",
-                        color: "#090909",
+                        background: colors.primary,
+                        color: colors.background,
                     }}
                 >
                     L

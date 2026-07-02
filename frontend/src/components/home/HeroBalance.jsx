@@ -64,7 +64,7 @@ export default function HeroBalance() {
             rounded-full
             px-3
             py-1.5
-        "
+          "
                     style={{
                         background: "rgba(52,199,89,.12)",
                         color: "#34C759",

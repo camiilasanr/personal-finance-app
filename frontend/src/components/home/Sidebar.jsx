@@ -9,6 +9,7 @@ import {
     LogOut,
 } from "lucide-react";
 import Logo from "../common/Logo";
+import { colors } from "../../design-system";
 
 const NAV_ITEMS = [
     {
@@ -18,8 +19,8 @@ const NAV_ITEMS = [
     },
     {
         icon: ArrowLeftRight,
-        label: "Movimientos",
-        to: "/movimientos",
+        label: "Actividad",
+        to: "/activity",
     },
     {
         icon: CreditCard,
@@ -55,10 +56,10 @@ export default function Sidebar() {
         px-5
         py-8
         border-r
-      "
-            style={{
-                background: "#090909",
-                borderColor: "rgba(255,255,255,.05)",
+    "
+        style={{
+                background: colors.background,
+                borderColor: colors.border,
             }}
         >
             <div>
@@ -75,16 +76,16 @@ export default function Sidebar() {
                                 key={to}
                                 to={to}
                                 className={`
-                  group
-                  relative
-                  flex
-                  items-center
-                  gap-3
-                  rounded-xl
-                  px-4
-                  py-3
-                  transition-all
-                  duration-200
+                    group
+                    relative
+                    flex
+                    items-center
+                    gap-3
+                    rounded-xl
+                    px-4
+                    py-3
+                    transition-all
+                    duration-200
                 `}
                                 style={{
                                     background: active
