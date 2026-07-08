@@ -20,13 +20,18 @@ const categories = [
 export default function CategoryCard() {
     return (
         <section
-            className="rounded-3xl p-7"
-            style={{
-                background: "#161616",
-                border: "1px solid rgba(255,255,255,.05)",
-            }}
+            className="
+                glass-card
+                rounded-[30px]
+                p-7
+            "
         >
-            <h3 className="text-lg font-semibold text-white">
+            <h3
+                className="text-lg font-semibold text-white"
+                style={{
+                    fontFamily: "var(--font-heading)",
+                }}
+            >
                 Gastos por categoría
             </h3>
 
@@ -34,6 +39,7 @@ export default function CategoryCard() {
                 className="mt-1 text-sm"
                 style={{
                     color: "#A1A1AA",
+                    fontFamily: "var(--font-body)",
                 }}
             >
                 Distribución del gasto mensual
@@ -42,20 +48,22 @@ export default function CategoryCard() {
             <div className="mt-8 flex flex-col gap-6">
                 {categories.map((category) => (
                     <div key={category.name}>
-                        <div className="flex items-center justify-between mb-2">
+                        <div className="mb-2 flex items-center justify-between">
                             <span
-                                className="text-sm"
+                                className="text-sm font-medium"
                                 style={{
                                     color: "#FFFFFF",
+                                    fontFamily: "var(--font-body)",
                                 }}
                             >
                                 {category.name}
                             </span>
 
                             <span
-                                className="text-sm font-medium"
+                                className="text-sm font-semibold"
                                 style={{
                                     color: "#A1A1AA",
+                                    fontFamily: "var(--font-body)",
                                 }}
                             >
                                 {category.percentage}%
@@ -63,7 +71,7 @@ export default function CategoryCard() {
                         </div>
 
                         <div
-                            className="h-2 w-full rounded-full overflow-hidden"
+                            className="h-2 w-full overflow-hidden rounded-full"
                             style={{
                                 background: "rgba(255,255,255,.05)",
                             }}

@@ -57,13 +57,13 @@ export default function Sidebar() {
         py-8
         border-r
     "
-        style={{
+            style={{
                 background: colors.background,
                 borderColor: colors.border,
             }}
         >
             <div>
-                <div className="mb-14">
+                <div className="mb-16 px-2">
                     <Logo />
                 </div>
 
@@ -116,6 +116,7 @@ export default function Sidebar() {
                                 <span
                                     className="text-sm font-medium"
                                     style={{
+                                        fontFamily: "var(--font-body)",
                                         color: active ? "#FFFFFF" : "#6B7280",
                                     }}
                                 >
@@ -163,7 +164,10 @@ export default function Sidebar() {
                     </div>
 
                     <div className="text-left">
-                        <p className="text-sm font-medium text-white">
+                        <p
+                            className="text-sm font-medium text-white"
+                            style={{ fontFamily: "var(--font-heading)" }}
+                        >
                             Laura Gómez
                         </p>
 
@@ -171,6 +175,7 @@ export default function Sidebar() {
                             className="text-xs"
                             style={{
                                 color: "#A1A1AA",
+                                fontFamily: "var(--font-body)",
                             }}
                         >
                             Ver perfil
@@ -181,21 +186,26 @@ export default function Sidebar() {
                 <Link
                     to="/login"
                     className="
-            flex
-            items-center
-            gap-3
-            text-sm
-            transition-colors
-            "
+        flex
+        items-center
+        gap-3
+        text-sm
+        transition-all
+        duration-200
+        rounded-xl
+        hover:bg-white/5
+        px-3
+        py-2.5
+    "
                     style={{
                         color: "#6B7280",
+                        fontFamily: "var(--font-body)",
                     }}
                 >
                     <LogOut
                         size={17}
                         strokeWidth={1.8}
                     />
-
                     Cerrar sesión
                 </Link>
             </div>

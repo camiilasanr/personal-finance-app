@@ -52,24 +52,40 @@ export default function ActivityList() {
     return (
         <section className="flex flex-col gap-5">
             <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-white">
+                <h3
+                    className="text-lg text-white"
+                    style={{
+                        fontFamily: "var(--font-heading)",
+                        fontWeight: 600,
+                        letterSpacing: "-0.02em",
+                    }}
+                >
                     Actividad reciente
                 </h3>
 
                 <button
-                    className="text-sm transition-colors hover:text-white"
-                    style={{ color: "#FF5C00" }}
+                    className="
+                        text-sm
+                        transition-all
+                        duration-200
+                        hover:translate-x-1
+                    "
+                    style={{
+                        color: "#FF5C00",
+                        fontFamily: "var(--font-heading)",
+                        fontWeight: 600,
+                    }}
                 >
                     Ver todo →
                 </button>
             </div>
 
             <div
-                className="overflow-hidden rounded-3xl"
-                style={{
-                    background: "#161616",
-                    border: "1px solid rgba(255,255,255,.05)",
-                }}
+                className="
+                    glass-card
+                    overflow-hidden
+                    rounded-[30px]
+                "
             >
                 {movements.map((movement, index) => {
                     const Icon = movement.icon;
@@ -78,7 +94,16 @@ export default function ActivityList() {
                     return (
                         <div
                             key={movement.title}
-                            className="flex items-center justify-between px-6 py-5 transition-colors hover:bg-white/[0.02]"
+                            className="
+                                flex
+                                items-center
+                                justify-between
+                                px-6
+                                py-5
+                                transition-all
+                                duration-200
+                                hover:bg-white/[0.02]
+                            "
                             style={{
                                 borderBottom:
                                     index !== movements.length - 1
@@ -88,7 +113,14 @@ export default function ActivityList() {
                         >
                             <div className="flex items-center gap-4">
                                 <div
-                                    className="flex h-11 w-11 items-center justify-center rounded-2xl"
+                                    className="
+                                        flex
+                                        h-11
+                                        w-11
+                                        items-center
+                                        justify-center
+                                        rounded-2xl
+                                    "
                                     style={{
                                         background: "rgba(255,255,255,.04)",
                                     }}
@@ -101,7 +133,13 @@ export default function ActivityList() {
                                 </div>
 
                                 <div>
-                                    <p className="font-medium text-white">
+                                    <p
+                                        className="text-white"
+                                        style={{
+                                            fontFamily: "var(--font-heading)",
+                                            fontWeight: 600,
+                                        }}
+                                    >
                                         {movement.title}
                                     </p>
 
@@ -109,6 +147,7 @@ export default function ActivityList() {
                                         className="mt-1 text-sm"
                                         style={{
                                             color: "#A1A1AA",
+                                            fontFamily: "var(--font-body)",
                                         }}
                                     >
                                         {movement.category} · {movement.date}
@@ -117,9 +156,12 @@ export default function ActivityList() {
                             </div>
 
                             <span
-                                className="text-sm font-semibold"
+                                className="text-base"
                                 style={{
                                     color: positive ? "#34C759" : "#FF453A",
+                                    fontFamily: "var(--font-heading)",
+                                    fontWeight: 700,
+                                    letterSpacing: "-0.02em",
                                 }}
                             >
                                 {positive ? "+" : "-"}

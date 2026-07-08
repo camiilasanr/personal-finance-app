@@ -20,6 +20,7 @@ export default function OnboardingIncome() {
                 <h1
                     className="text-white font-semibold leading-tight"
                     style={{
+                        fontFamily: "var(--font-heading)",
                         fontSize: "34px",
                         letterSpacing: "-1px",
                     }}
@@ -29,7 +30,10 @@ export default function OnboardingIncome() {
 
                 <p
                     className="mt-6 text-[15px] leading-7"
-                    style={{ color: "#A1A1AA" }}
+                    style={{
+                        color: "#A1A1AA",
+                        fontFamily: "var(--font-body)",
+                    }}
                 >
                     Esto nos ayudará a construir tu resumen financiero desde el primer día.
                 </p>

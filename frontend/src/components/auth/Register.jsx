@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
+import finoraLogo from "../../assets/brand/finora/finora_logotipo.svg";
 
 export default function Register() {
     const [showPassword, setShowPassword] = useState(false);
@@ -22,13 +23,12 @@ export default function Register() {
             style={{ background: "#090909", fontFamily: "'Inter', sans-serif" }}
         >
             <div className="w-full max-w-[430px] flex flex-col gap-5">
-                <div className="text-center">
-                    <span
-                        className="text-white text-2xl font-semibold"
-                        style={{ letterSpacing: "-0.5px" }}
-                    >
-                        finora
-                    </span>
+                <div className="flex justify-center">
+                    <img
+                        src={finoraLogo}
+                        alt="Finora"
+                        className="w-52 h-auto"
+                    />
                 </div>
 
                 <div
@@ -42,12 +42,18 @@ export default function Register() {
                 >
                     <div className="flex flex-col gap-1">
                         <h1
-                            className="text-white font-semibold"
-                            style={{ fontSize: "22px", letterSpacing: "-0.4px" }}
+                            className="text-[22px] font-semibold text-white tracking-[-0.4px]"
+                            style={{ fontFamily: "var(--font-heading)" }}
                         >
                             Crear cuenta
                         </h1>
-                        <p className="text-sm" style={{ color: "#A1A1AA" }}>
+                        <p
+                            className="text-sm"
+                            style={{
+                                color: "#A1A1AA",
+                                fontFamily: "var(--font-body)",
+                            }}
+                        >
                             Empieza a controlar tus finanzas hoy.
                         </p>
                     </div>
@@ -55,7 +61,13 @@ export default function Register() {
                     <form className="flex flex-col gap-2.5" onSubmit={(e) => e.preventDefault()}>
                         <div className="grid grid-cols-2 gap-3">
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-xs font-medium" style={{ color: "#A1A1AA" }}>
+                                <label
+                                    className="text-xs font-medium"
+                                    style={{
+                                        color: "#A1A1AA",
+                                        fontFamily: "var(--font-body)",
+                                    }}
+                                >
                                     Nombres
                                 </label>
                                 <input
@@ -69,7 +81,13 @@ export default function Register() {
                             </div>
 
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-xs font-medium" style={{ color: "#A1A1AA" }}>
+                                <label
+                                    className="text-xs font-medium"
+                                    style={{
+                                        color: "#A1A1AA",
+                                        fontFamily: "var(--font-body)",
+                                    }}
+                                >
                                     Apellidos
                                 </label>
                                 <input
@@ -84,7 +102,13 @@ export default function Register() {
                         </div>
 
                         <div className="flex flex-col gap-1.5">
-                            <label className="text-xs font-medium" style={{ color: "#A1A1AA" }}>
+                            <label
+                                className="text-xs font-medium"
+                                style={{
+                                    color: "#A1A1AA",
+                                    fontFamily: "var(--font-body)",
+                                }}
+                            >
                                 Correo electrónico
                             </label>
                             <input
@@ -98,7 +122,13 @@ export default function Register() {
                         </div>
 
                         <div className="flex flex-col gap-1.5">
-                            <label className="text-xs font-medium" style={{ color: "#A1A1AA" }}>
+                            <label
+                                className="text-xs font-medium"
+                                style={{
+                                    color: "#A1A1AA",
+                                    fontFamily: "var(--font-body)",
+                                }}
+                            >
                                 Contraseña
                             </label>
 
@@ -115,7 +145,7 @@ export default function Register() {
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" 
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
                                     style={{ color: "#52525b" }}
                                 >
                                     {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
@@ -124,7 +154,13 @@ export default function Register() {
                         </div>
 
                         <div className="flex flex-col gap-1.5">
-                            <label className="text-xs font-medium" style={{ color: "#A1A1AA" }}>
+                            <label
+                                className="text-xs font-medium"
+                                style={{
+                                    color: "#A1A1AA",
+                                    fontFamily: "var(--font-body)",
+                                }}
+                            >
                                 Confirmar contraseña
                             </label>
 
@@ -160,7 +196,13 @@ export default function Register() {
                                 />
                             </div>
 
-                            <span className="text-xs leading-relaxed" style={{ color: "#A1A1AA" }}>
+                            <span
+                                className="text-xs leading-relaxed"
+                                style={{
+                                    color: "#A1A1AA",
+                                    fontFamily: "var(--font-body)",
+                                }}
+                            >
                                 Acepto los{" "}
                                 <a href="#" style={{ color: "#FF5C00" }}>
                                     Términos de servicio
@@ -175,7 +217,10 @@ export default function Register() {
                         <button
                             type="submit"
                             className="mt-1 w-full py-3 rounded-xl text-sm font-semibold text-black cursor-pointer"
-                            style={{ background: "#FF5C00" }}
+                            style={{
+                                background: "#FF5C00",
+                                fontFamily: "var(--font-body)",
+                            }}
                         >
                             Crear cuenta
                         </button>
@@ -200,6 +245,7 @@ export default function Register() {
                         style={{
                             background: "#0f0f0f",
                             border: "1px solid rgba(255,255,255,0.08)",
+                            fontFamily: "var(--font-body)",
                         }}
                     >
                         <GoogleIcon />
@@ -207,7 +253,13 @@ export default function Register() {
                     </button>
                 </div>
 
-                <p className="text-center text-sm" style={{ color: "#52525b" }}>
+                <p
+                    className="text-center text-sm"
+                    style={{
+                        color: "#52525b",
+                        fontFamily: "var(--font-body)",
+                    }}
+                >
                     ¿Ya tienes cuenta?{" "}
                     <Link
                         to="/login"

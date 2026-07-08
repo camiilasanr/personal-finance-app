@@ -1,10 +1,12 @@
+import finoraLogo from "../../assets/brand/finora/finora_horizontal.svg";
+
 export default function Logo() {
     return (
-        <span
-            className="text-white text-2xl font-semibold"
-            style={{ letterSpacing: "-0.5px" }}
-        >
-            finora
-        </span>
+        <img
+            src={finoraLogo}
+            alt="Finora"
+            className="w-[180px] h-auto select-none"
+            draggable={false}
+        />
     );
 }

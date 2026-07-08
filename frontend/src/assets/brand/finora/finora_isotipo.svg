@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   id="svg_naurix"
+   inkscape:version="1.4"
+   sodipodi:docname="NAURIX_avatar_naranja_fondonegro.svg"
+   inkscape:export-filename=" finora_isotipo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="512"
+       height="512"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <title
+     id="title_naurix">NAURIX - avatar - naranja</title>
+  <desc
+     id="desc_naurix">Version avatar en color naranja. Geometria identica al archivo maestro LOGO_DEFINITIVO_NAURIX.svg. Forma, inclinacion, proporcion y separacion sin modificar.</desc>
+  <g
+     inkscape:groupmode="layer"
+     id="layer_fondo"
+     inkscape:label="00 Fondo negro">
+    <rect
+       id="fondo_negro"
+       inkscape:label="Fondo negro"
+       x="0"
+       y="0"
+       width="512"
+       height="512"
+       fill="#000000"
+       style="fill:#ff6a00;fill-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer_isotipo"
+     inkscape:label="01 Isotipo">
+    <g
+       id="grupo_isotipo"
+       inkscape:label="Isotipo NAURIX"
+       transform="matrix(0.914286,0,0,0.914286,-482.7429,14.6286)"
+       style="fill:#d95801;fill-opacity:1">
+      <polygon
+         id="simbolo_superior"
+         inkscape:label="Barra diagonal superior"
+         points="782,128 898,128 727,298 612,298 "
+         fill="#FF6A00"
+         style="fill:#d95801;fill-opacity:1" />
+      <polygon
+         id="simbolo_inferior"
+         inkscape:label="Barra diagonal inferior"
+         points="883,233 1004,233 835,400 716,400 "
+         fill="#FF6A00"
+         style="fill:#d95801;fill-opacity:1" />
+    </g>
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>NAURIX - avatar - naranja</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -18,6 +18,7 @@ export default function OnboardingAccount() {
                 <h1
                     className="text-white font-semibold leading-tight"
                     style={{
+                        fontFamily: "var(--font-heading)",
                         fontSize: "34px",
                         letterSpacing: "-1px",
                     }}
@@ -27,14 +28,20 @@ export default function OnboardingAccount() {
 
                 <p
                     className="mt-6 text-[15px] leading-7"
-                    style={{ color: "#A1A1AA" }}
+                    style={{
+                        color: "#A1A1AA",
+                        fontFamily: "var(--font-body)",
+                    }}
                 >
                     Empecemos creando tu primera cuenta.
                 </p>
 
                 <p
-                    className="mt-2 text-[15px] leading-7"
-                    style={{ color: "#6B7280" }}
+                    className="mt-6 text-[15px] leading-7"
+                    style={{
+                        color: "#A1A1AA",
+                        fontFamily: "var(--font-body)",
+                    }}
                 >
                     Puedes agregar más cuando quieras.
                 </p>

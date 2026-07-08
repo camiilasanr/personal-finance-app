@@ -3,6 +3,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import StackedTextType from "../common/StackedTextType";
 import AnimatedLoginText from "../common/AnimatedLoginText";
+import finoraLogo from "../../assets/brand/finora/finora_logotipo.svg";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,9 +19,11 @@ function Login() {
     >
       <div className="hidden lg:flex w-[50%] justify-center">
         <div className="hidden h-full lg:flex flex-col justify-between pl-20 pr-10 py-14">
-          <span className="text-white text-3xl font-semibold" style={{ letterSpacing: "-0.5px" }}>
-            finora
-          </span>
+          <img
+            src={finoraLogo}
+            alt="Finora"
+            className="w-72 h-auto"
+          />
 
           {/* <AnimatedLoginText /> */}
           <StackedTextType />
@@ -33,8 +36,12 @@ function Login() {
 
       <div className="w-full lg:w-[50%] flex items-center justify-center px-5 py-6 sm:px-6 lg:px-16 lg:py-14">
         <div className="w-full max-w-[430px] flex flex-col gap-4 sm:gap-5">
-          <div className="lg:hidden text-center">
-            <span className="text-white text-2xl font-semibold" style={{ letterSpacing: "-0.5px" }}>finora</span>
+          <div className="lg:hidden flex justify-center">
+            <img
+              src={finoraLogo}
+              alt="Finora"
+              className="w-44 h-auto"
+            />
           </div>
 
           <div
@@ -42,17 +49,34 @@ function Login() {
             style={{ background: "#161616", borderRadius: "24px", border: "1px solid rgba(255,255,255,0.06)", boxShadow: "0 2px 40px rgba(0,0,0,0.6)" }}
           >
             <div className="flex flex-col gap-1.5">
-              <h1 className="text-white font-semibold" style={{ fontSize: "22px", letterSpacing: "-0.4px" }}>
+              <h1
+                className="text-[22px] font-semibold text-white tracking-[-0.4px]"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
                 Bienvenida de nuevo
               </h1>
-              <p className="text-sm" style={{ color: "#A1A1AA" }}>
+              <p
+                className="text-sm"
+                style={{
+                  color: "#A1A1AA",
+                  fontFamily: "var(--font-body)",
+                }}
+              >
                 Inicia sesión para continuar administrando tus finanzas.
               </p>
             </div>
 
             <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium" style={{ color: "#A1A1AA" }}>Correo electrónico</label>
+                <label
+                  className="text-xs font-medium"
+                  style={{
+                    color: "#A1A1AA",
+                    fontFamily: "var(--font-body)",
+                  }}
+                >
+                  Correo electrónico
+                </label>
                 <input
                   type="email"
                   placeholder="tu@email.com"
@@ -67,7 +91,15 @@ function Login() {
 
               <div className="flex flex-col gap-1.5">
                 <div className="flex items-center justify-between">
-                  <label className="text-xs font-medium" style={{ color: "#A1A1AA" }}>Contraseña</label>
+                  <label
+                    className="text-xs font-medium"
+                    style={{
+                      color: "#A1A1AA",
+                      fontFamily: "var(--font-body)",
+                    }}
+                  >
+                    Contraseña
+                  </label>
                   <a href="#" className="text-xs" style={{ color: "#A1A1AA" }}>¿Olvidaste tu contraseña?</a>
                 </div>
 
@@ -91,7 +123,10 @@ function Login() {
               <button
                 type="submit"
                 className="mt-1 w-full py-3.5 rounded-xl text-sm font-semibold text-black transition-all active:scale-[0.98] cursor-pointer"
-                style={{ background: "#FF5C00" }}
+                style={{
+                  background: "#FF5C00",
+                  fontFamily: "var(--font-body)",
+                }}
               >
                 Iniciar sesión
               </button>
@@ -108,6 +143,7 @@ function Login() {
               style={{
                 background: "#0f0f0f",
                 border: "1px solid rgba(255,255,255,0.08)",
+                fontFamily: "var(--font-body)",
               }}
             >
               <GoogleIcon />
@@ -115,7 +151,13 @@ function Login() {
             </button>
           </div>
 
-          <p className="text-center text-sm" style={{ color: "#52525b" }}>
+          <p
+            className="text-center text-sm"
+            style={{
+              color: "#52525b",
+              fontFamily: "var(--font-body)",
+            }}
+          >
             ¿No tienes cuenta?{" "}
             <Link to="/register" className="font-medium" style={{ color: "#FF5C00" }}>
               Crear cuenta

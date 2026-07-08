@@ -14,19 +14,25 @@ export default function ActivitySearch() {
                 type="text"
                 placeholder="Buscar movimiento..."
                 className="
-            w-full
-            rounded-2xl
-            py-4
-            pl-12
-            pr-4
-            text-sm
-            outline-none
-            transition-all
-        "
+                    w-full
+                    rounded-[20px]
+                    py-4
+                    pl-12
+                    pr-4
+                    text-sm
+                    outline-none
+                    transition-all
+                    duration-200
+                    focus:border-[#FF5C00]
+                "
                 style={{
-                    background: "#161616",
+                    background: "rgba(22,22,22,.85)",
+                    backdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)",
                     border: "1px solid rgba(255,255,255,.06)",
                     color: "#FFFFFF",
+                    fontFamily: "var(--font-body)",
+                    fontWeight: 400,
                 }}
             />
         </div>

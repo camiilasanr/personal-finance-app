@@ -53,6 +53,7 @@ export default function StackedTextType() {
                     key={word.text}
                     className="font-semibold leading-none"
                     style={{
+                        fontFamily: "var(--font-heading)",
                         fontSize: "clamp(48px, 5.5vw, 80px)",
                         letterSpacing: "-2px",
                         color: word.color,

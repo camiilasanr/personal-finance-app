@@ -34,29 +34,39 @@ export default function SummaryCards() {
                     <article
                         key={card.title}
                         className="
-                rounded-3xl
-                p-6
-                transition-all
-                duration-300
-                hover:-translate-y-1
-            "
-                        style={{
-                            background: "#161616",
-                            border: "1px solid rgba(255,255,255,.05)",
-                        }}
+                            glass-card
+                            rounded-[30px]
+                            p-6
+                            transition-all
+                            duration-300
+                            hover:-translate-y-1
+                        "
                     >
                         <div className="flex items-center justify-between">
                             <p
                                 className="text-sm font-medium"
-                                style={{ color: "#A1A1AA" }}
+                                style={{
+                                    color: "#A1A1AA",
+                                    fontFamily: "var(--font-body)",
+                                }}
                             >
                                 {card.title}
                             </p>
 
                             <div
-                                className="h-10 w-10 rounded-full flex items-center justify-center"
+                                className="
+                                    h-10
+                                    w-10
+                                    rounded-full
+                                    flex
+                                    items-center
+                                    justify-center
+                                    transition-all
+                                    duration-200
+                                "
                                 style={{
                                     background: "rgba(255,255,255,.04)",
+                                    border: "1px solid rgba(255,255,255,.05)",
                                 }}
                             >
                                 <Icon
@@ -68,15 +78,23 @@ export default function SummaryCards() {
                         </div>
 
                         <h3
-                            className="mt-6 text-3xl font-semibold text-white"
-                            style={{ letterSpacing: "-1px" }}
+                            className="mt-6 text-white leading-none"
+                            style={{
+                                fontFamily: "var(--font-body)",
+                                fontWeight: 700,
+                                fontSize: "34px",
+                                letterSpacing: "-1.2px",
+                            }}
                         >
                             {card.value}
                         </h3>
 
                         <p
-                            className="mt-2 text-sm"
-                            style={{ color: card.color }}
+                            className="mt-3 text-sm font-medium"
+                            style={{
+                                color: card.color,
+                                fontFamily: "var(--font-body)",
+                            }}
                         >
                             {card.subtitle}
                         </p>

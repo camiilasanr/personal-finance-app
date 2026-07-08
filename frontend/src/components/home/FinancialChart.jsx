@@ -5,6 +5,7 @@ import {
     XAxis,
     YAxis,
     Tooltip,
+    CartesianGrid,
 } from "recharts";
 
 const DATA = [
@@ -28,19 +29,27 @@ function CustomTooltip({ active, payload }) {
         <div
             className="rounded-2xl px-4 py-3"
             style={{
-                background: "#161616",
+                background: "rgba(22,22,22,.95)",
+                backdropFilter: "blur(12px)",
                 border: "1px solid rgba(255,255,255,.06)",
+                boxShadow: "0 10px 30px rgba(0,0,0,.35)",
             }}
         >
             <p
                 className="text-xs"
-                style={{ color: "#A1A1AA" }}
+                style={{
+                    color: "#A1A1AA",
+                    fontFamily: "var(--font-body)",
+                }}
             >
                 Patrimonio
             </p>
 
             <p
                 className="mt-1 text-sm font-semibold text-white"
+                style={{
+                    fontFamily: "var(--font-body)",
+                }}
             >
                 {formatMoney(payload[0].value)}
             </p>
@@ -52,26 +61,27 @@ export default function FinancialChart() {
     return (
         <section
             className="
-        rounded-3xl
-        p-7
-    "
-            style={{
-                background: "#161616",
-                border: "1px solid rgba(255,255,255,.05)",
-            }}
+                glass-card
+                rounded-[30px]
+                p-7
+            "
         >
-            <div className="flex items-center justify-between mb-8">
+            <div className="mb-8 flex items-center justify-between">
                 <div>
                     <h3
                         className="text-lg font-semibold text-white"
+                        style={{
+                            fontFamily: "var(--font-heading)",
+                        }}
                     >
                         Evolución del patrimonio
                     </h3>
 
                     <p
-                        className="text-sm mt-1"
+                        className="mt-1 text-sm"
                         style={{
                             color: "#A1A1AA",
+                            fontFamily: "var(--font-body)",
                         }}
                     >
                         Últimos siete meses
@@ -81,7 +91,8 @@ export default function FinancialChart() {
                 <span
                     className="text-xs"
                     style={{
-                        color: "#52525b",
+                        color: "#6B7280",
+                        fontFamily: "var(--font-body)",
                     }}
                 >
                     Actualizado hoy
@@ -99,6 +110,11 @@ export default function FinancialChart() {
                             bottom: 5,
                         }}
                     >
+                        <CartesianGrid
+                            vertical={false}
+                            stroke="rgba(255,255,255,.04)"
+                        />
+
                         <XAxis
                             dataKey="month"
                             tick={{
@@ -113,7 +129,7 @@ export default function FinancialChart() {
 
                         <Tooltip
                             cursor={{
-                                stroke: "rgba(255,255,255,.05)",
+                                stroke: "rgba(255,255,255,.06)",
                                 strokeWidth: 1,
                             }}
                             content={<CustomTooltip />}
@@ -123,12 +139,13 @@ export default function FinancialChart() {
                             type="monotone"
                             dataKey="balance"
                             stroke="#FF5C00"
-                            strokeWidth={2}
+                            strokeWidth={3}
                             dot={false}
                             activeDot={{
-                                r: 5,
+                                r: 6,
                                 fill: "#FF5C00",
-                                strokeWidth: 0,
+                                stroke: "#161616",
+                                strokeWidth: 2,
                             }}
                         />
                     </LineChart>

@@ -2,10 +2,12 @@ export default function ActivityHeader() {
     return (
         <header className="flex flex-col gap-2">
             <h1
-                className="text-white font-semibold leading-tight"
+                className="text-white leading-tight"
                 style={{
+                    fontFamily: "var(--font-heading)",
                     fontSize: "34px",
-                    letterSpacing: "-1px",
+                    fontWeight: 700,
+                    letterSpacing: "-0.04em",
                 }}
             >
                 Actividad
@@ -13,7 +15,11 @@ export default function ActivityHeader() {
 
             <p
                 className="text-[15px] leading-7"
-                style={{ color: "#A1A1AA" }}
+                style={{
+                    color: "#A1A1AA",
+                    fontFamily: "var(--font-body)",
+                    fontWeight: 400,
+                }}
             >
                 Todo lo que ha ocurrido con tu dinero.
             </p>

@@ -11,6 +11,7 @@ export default function OnboardingWelcome() {
                 <h1
                     className="text-white font-semibold leading-tight"
                     style={{
+                        fontFamily: "var(--font-heading)",
                         fontSize: "34px",
                         letterSpacing: "-1px",
                     }}
@@ -20,14 +21,19 @@ export default function OnboardingWelcome() {
 
                 <p
                     className="mt-6 text-[15px] leading-7"
-                    style={{ color: "#A1A1AA" }}
+                    style={{
+                        color: "#A1A1AA",
+                        fontFamily: "var(--font-body)",
+                    }}
                 >
                     Tu cuenta ha sido creada correctamente.
                 </p>
-
                 <p
                     className="mt-2 text-[15px] leading-7"
-                    style={{ color: "#6B7280" }}
+                    style={{
+                        color: "#6B7280",
+                        fontFamily: "var(--font-body)",
+                    }}
                 >
                     Ahora configuraremos tu espacio financiero.
                 </p>

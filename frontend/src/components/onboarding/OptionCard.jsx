@@ -26,6 +26,7 @@ export default function OptionCard({
             <h3
                 className="text-base font-semibold"
                 style={{
+                    fontFamily: "var(--font-heading)",
                     color: "#FFFFFF",
                     letterSpacing: "-0.3px",
                 }}
@@ -36,6 +37,7 @@ export default function OptionCard({
             <p
                 className="mt-2 text-sm leading-6"
                 style={{
+                    fontFamily: "var(--font-body)",
                     color: "#A1A1AA",
                 }}
             >
