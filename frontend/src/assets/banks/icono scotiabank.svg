@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="500"
+   viewBox="6.21 9.78 43.2 31.096775"
+   width="500"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="scotiabank-5.svg"
+   inkscape:export-filename="../../Downloads/icono scotiabank.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="43.200001"
+       height="31.096775"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <path
+     d="m 39.367,25.343387 c 0.134,6.593 -5.825,11.571 -10.805,11.571 h -12.31 l -7.723,7.694 h 19.899 c 6.353,0 12.447,-5.715 12.447,-12.537999 0,-2.004 -0.242,-4.614 -1.507,-6.593 v -0.134 m -2.113,4.857 c 0.768,-1.372 1.145,-2.88 1.238,-4.347 h -5.585 c 0,1.36 -0.227,2.84 -0.738,4.347 z m -5.449,0.862 c -0.634,1.613 -2.14,3.711 -3.605,4.856 2.837,0 6.08,-1.238 8.45,-4.856 z m -0.634,-0.862 c 0.499,-1.372 0.727,-2.88 0.862,-4.347 h -8.45 c 0.135,1.467 0.363,2.975 0.861,4.347 z m -7.694,0 c -0.498,-1.507 -0.768,-2.986 -0.768,-4.347 h -5.583 c 0.134,1.467 0.498,2.975 1.236,4.347 z m 4.345,4.844 c 1.103,-0.997 2.341,-2.61 2.973,-3.982 h -5.974 c 0.634,1.372 1.871,2.985 3.001,3.982 z m -8.961,-3.982 c 2.475,3.618 5.717,4.856 8.598,4.856 -1.509,-1.146 -3.108,-3.243 -3.621,-4.856 z M 32.17,20.633387 c 0.511,1.332 0.738,2.839 0.738,4.345 h 5.585 c -0.093,-1.506 -0.471,-3.013 -1.238,-4.345 z m 4.481,-1.01 c -2.37,-3.471 -5.612,-4.843 -8.45,-4.843 1.465,1.104 2.971,3.203 3.605,4.843 z m -12.206,1.01 c -0.498,1.332 -0.726,2.839 -0.861,4.345 h 8.45 c -0.135,-1.506 -0.364,-3.013 -0.862,-4.345 z m -6.081,0 c -0.738,1.332 -1.103,2.839 -1.236,4.345 h 5.583 c 0,-1.506 0.27,-3.013 0.768,-4.345 z m 9.459,-4.885 c -1.13,0.997 -2.367,2.503 -3,3.875 h 5.974 c -0.633,-1.372 -1.871,-2.878 -2.974,-3.875 z m -3.983,3.875 c 0.513,-1.641 2.112,-3.74 3.621,-4.843 -2.881,0 -6.124,1.372 -8.598,4.843 z m -7.588,5.584 c -1.237,-1.964 -1.508,-4.574 -1.508,-6.579 0,-6.823 6.096,-12.5799995 12.445,-12.5799995 H 47.091 L 39.367,13.837387 H 27.056 c -4.95,0 -10.94,5.02 -10.804,11.37 z"
+     fill="#ee3224"
+     id="path1"
+     sodipodi:nodetypes="csccsscccccccccccccccccccccccccccccccccccccccccccccccccccccccccssccsc"
+     style="fill:#ffffff" />
+</svg>

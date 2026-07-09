@@ -1,109 +1,111 @@
-import {
-    bancolombia,
-    nequi,
-    davivienda,
-    nu,
-} from "../../assets/banks";
-
-const logos = {
-    bancolombia,
-    nequi,
-    davivienda,
-    nu,
-};
-
 export default function AccountCard({
-    bank = "bancolombia",
-    type = "Cuenta de ahorros",
-    number = "•••• 4321",
-    balance = "$4.850.000",
+    name,
+    nickname,
+    number,
+    balance,
 }) {
-    const Logo = logos[bank];
+    const accentColor =
+        name === "Bancolombia"
+            ? "#34C759"
+            : name === "Nu"
+            ? "#FF453A"
+            : "#FF9F0A";
 
     return (
-        <article
+        <button
             className="
-                glass-card
-                rounded-[30px]
-                p-7
+                w-full
+                rounded-[28px]
+                border
+                border-white/[0.05]
+                bg-[#151515]
+                px-8
+                py-6
+                text-left
                 transition-all
                 duration-300
-                hover:-translate-y-1
+                hover:border-white/[0.08]
+                hover:bg-white/[0.02]
+                hover:-translate-y-0.5
             "
         >
-            <div className="flex items-center gap-5">
-                <img
-                    src={Logo}
-                    alt={bank}
-                    className="
-                        h-11
-                        object-contain
-                        shrink-0
-                    "
-                />
+            <div
+                className="
+                    flex
+                    flex-col
+                    gap-6
+                    md:flex-row
+                    md:items-center
+                    md:justify-between
+                "
+            >
+                {/* Lado izquierdo */}
+                <div className="flex items-start gap-5">
 
-                <div>
-                    <h3
-                        className="text-white"
+                    <div
+                        className="h-14 w-1 rounded-full shrink-0"
                         style={{
+                            background: accentColor,
+                        }}
+                    />
+
+                    <div>
+                        <h3
+                            className="text-white"
+                            style={{
+                                fontFamily: "var(--font-heading)",
+                                fontSize: "24px",
+                                fontWeight: 700,
+                                letterSpacing: "-0.04em",
+                            }}
+                        >
+                            {name}
+                        </h3>
+
+                        <p
+                            className="mt-1"
+                            style={{
+                                color: "#8F8F95",
+                                fontFamily: "var(--font-body)",
+                                fontSize: "15px",
+                            }}
+                        >
+                            {nickname}
+                        </p>
+                    </div>
+
+                </div>
+
+                {/* Saldo */}
+                <div className="md:text-right">
+
+                    <h2
+                        className="leading-none"
+                        style={{
+                            color: "#FFFFFF",
                             fontFamily: "var(--font-heading)",
+                            fontSize: "30px",
                             fontWeight: 700,
-                            fontSize: "22px",
-                            letterSpacing: "-0.03em",
-                            textTransform: "capitalize",
+                            letterSpacing: "-0.04em",
                         }}
                     >
-                        {bank}
-                    </h3>
+                        {balance}
+                    </h2>
 
                     <p
-                        className="mt-1"
+                        className="mt-3"
                         style={{
-                            color: "#A1A1AA",
+                            color: "#6B7280",
                             fontFamily: "var(--font-body)",
                             fontSize: "14px",
+                            letterSpacing: "0.08em",
                         }}
                     >
-                        {type}
+                        {number}
                     </p>
+
                 </div>
             </div>
-
-            <div className="mt-10">
-                <p
-                    style={{
-                        color: "#6B7280",
-                        fontFamily: "var(--font-body)",
-                        fontSize: "13px",
-                        letterSpacing: "0.08em",
-                    }}
-                >
-                    {number}
-                </p>
-
-                <h2
-                    className="mt-4 text-white leading-none"
-                    style={{
-                        fontFamily: "var(--font-heading)",
-                        fontWeight: 700,
-                        fontSize: "42px",
-                        letterSpacing: "-0.05em",
-                    }}
-                >
-                    {balance}
-                </h2>
-
-                <p
-                    className="mt-3"
-                    style={{
-                        color: "#A1A1AA",
-                        fontFamily: "var(--font-body)",
-                        fontSize: "14px",
-                    }}
-                >
-                    Disponible
-                </p>
-            </div>
-        </article>
+        </button>
     );
 }

@@ -9,6 +9,30 @@ import BottomNavigation from "../components/home/BottomNavigation";
 
 import AccountCard from "../components/accounts/AccountCard";
 
+const accounts = [
+    {
+        name: "Bancolombia",
+        nickname: "Principal",
+        number: "•••• 4321",
+        balance: "$4.850.000",
+        color: "#34C759",
+    },
+    {
+        name: "Nu",
+        nickname: "Compras",
+        number: "•••• 1204",
+        balance: "-$820.000",
+        color: "#FF453A",
+    },
+    {
+        name: "Nequi",
+        nickname: "Uso diario",
+        number: "•••• 8526",
+        balance: "$720.000",
+        color: "#FF9F0A",
+    },
+];
+
 export default function AccountsPage() {
     return (
         <div
@@ -21,7 +45,7 @@ export default function AccountsPage() {
             <Sidebar />
 
             <main className="flex-1 overflow-y-auto">
-                <div className="mx-auto w-full max-w-[1400px] px-6 py-8 lg:px-10 lg:py-10">
+                <div className="mx-auto w-full max-w-[900px] px-6 py-8 lg:px-10 lg:py-10">
 
                     {/* Header móvil */}
                     <div className="mb-8 flex items-center justify-between lg:hidden">
@@ -56,12 +80,8 @@ export default function AccountsPage() {
                         </div>
                     </div>
 
-                    {/* Header escritorio */}
-                    <div className="hidden lg:block">
-                        <Header />
-                    </div>
 
-                    <section className="mt-8 flex items-end justify-between gap-6 flex-wrap">
+                    <section className="mt-2 flex items-end justify-between gap-6 flex-wrap">
                         <div>
                             <h1
                                 className="text-white"
@@ -74,16 +94,6 @@ export default function AccountsPage() {
                             >
                                 Mis cuentas
                             </h1>
-
-                            <p
-                                className="mt-2"
-                                style={{
-                                    color: "#A1A1AA",
-                                    fontFamily: "var(--font-body)",
-                                }}
-                            >
-                                Administra todas tus cuentas y tarjetas desde un solo lugar.
-                            </p>
                         </div>
 
                         <button
@@ -110,46 +120,22 @@ export default function AccountsPage() {
                         </button>
                     </section>
 
-                    <section className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-
-                        <AccountCard
-                            bank="bancolombia"
-                            type="Cuenta de ahorros"
-                            number="**** 4321"
-                            balance="$4.850.000"
-                            accountType="savings"
-                        />
-
-                        <AccountCard
-                            bank="nu"
-                            type="Tarjeta de crédito"
-                            number="**** 1204"
-                            balance="-$820.000"
-                            accountType="credit"
-                        />
-
-                        <AccountCard
-                            bank="nequi"
-                            type="Depósito de bajo monto"
-                            number="**** 8526"
-                            balance="$720.000"
-                            accountType="wallet"
-                        />
-
-                        <AccountCard
-                            bank="davivienda"
-                            type="Cuenta corriente"
-                            number="**** 9128"
-                            balance="$1.260.000"
-                            accountType="savings"
-                        />
-
+                    <section className="mt-10 flex flex-col gap-5">
+                        {accounts.map((account) => (
+                            <AccountCard
+                                key={account.number}
+                                name={account.name}
+                                nickname={account.nickname}
+                                number={account.number}
+                                balance={account.balance}
+                                color={account.color}
+                            />
+                        ))}
                     </section>
 
                 </div>
 
                 <FloatingActionButton />
-
                 <BottomNavigation />
             </main>
         </div>

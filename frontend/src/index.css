@@ -96,6 +96,44 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* =========================================
+   CONTENEDOR MAIN (CORREGIDO)
+========================================= */
+main {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  /* SOLUCIÓN AL MOVIMIENTO: Forzamos a que main tenga altura real en pantalla */
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Fondo líquido acotado arriba a la derecha */
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Fijado de forma estricta en el borde derecho absoluto */
+  width: 100vw;
+  /* Mantiene las dimensiones exactas de la pantalla */
+  height: 70vh;
+  z-index: -1;
+
+  /* CORRECCIÓN: Nace exactamente en 100% (derecha) y 0% (arriba) con tu opacidad (0.4) y radio (50%) */
+  background: radial-gradient(circle at 100% 0%, rgba(255, 92, 0, 0.4) 0%, transparent 50%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  /* Filtro de desenfoque de tus pruebas */
+  filter: blur(90px);
+
+  /* Tu animación fluida de largo recorrido */
+  animation: longOrangeMotion 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
 button,
 input,
 textarea,
@@ -123,6 +161,23 @@ a {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
+  }
+}
+
+@keyframes longOrangeMotion {
+  0% {
+    /* Inicio perfecto en el vértice superior derecho */
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  50% {
+    /* VIAJE LARGO: Se desplaza suavemente cruzando la franja superior hacia la izquierda */
+    transform: translate(-50vw, 40px) scale(0.9);
+  }
+
+  100% {
+    /* Movimiento de regreso sutil con variación de tamaño */
+    transform: translate(10vw, -10px) scale(1.1);
   }
 }
 
