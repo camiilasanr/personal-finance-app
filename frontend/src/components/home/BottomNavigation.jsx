@@ -42,18 +42,18 @@ export default function BottomNavigation() {
     return (
         <nav
             className="
-        lg:hidden
-        fixed
-        bottom-0
-        left-0
-        right-0
-        h-20
-        px-3
-        flex
-        items-center
-        justify-between
-        z-40
-    "
+                lg:hidden
+                fixed
+                bottom-0
+                left-0
+                right-0
+                h-20
+                px-3
+                flex
+                items-center
+                justify-between
+                z-40
+            "
             style={{
                 background: "rgba(9,9,9,.96)",
                 backdropFilter: "blur(20px)",
@@ -66,21 +66,23 @@ export default function BottomNavigation() {
                         <button
                             key={to}
                             className="
-                -mt-8
-                h-14
-                w-14
-                rounded-full
-                flex
-                items-center
-                justify-center
-                shadow-lg
-              "
+                                -mt-6
+                                h-16
+                                w-16
+                                rounded-full
+                                flex
+                                items-center
+                                justify-center
+                                shadow-lg
+                                shrink-0
+                            "
                             style={{
                                 background: "#FF5C00",
+                                boxShadow: "0 8px 24px rgba(255,92,0,.25)",
                             }}
                         >
                             <Plus
-                                size={22}
+                                size={24}
                                 color="#090909"
                                 strokeWidth={2.5}
                             />
@@ -95,22 +97,22 @@ export default function BottomNavigation() {
                         key={to}
                         to={to}
                         className="
-                flex
-                flex-col
-                items-center
-                justify-center
-                gap-1
-                flex-1
-            "
+                            flex
+                            flex-col
+                            items-center
+                            justify-center
+                            gap-1.5
+                            flex-1
+                        "
                     >
                         <Icon
-                            size={18}
-                            strokeWidth={1.8}
+                            size={20}
+                            strokeWidth={2}
                             color={active ? "#FFFFFF" : "#6B7280"}
                         />
 
                         <span
-                            className="text-[11px]"
+                            className="text-xs font-medium"
                             style={{
                                 color: active ? "#FFFFFF" : "#6B7280",
                             }}

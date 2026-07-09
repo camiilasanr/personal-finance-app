@@ -1,4 +1,10 @@
-import { Plus, X, ArrowDownLeft, ArrowUpRight, ArrowLeftRight } from "lucide-react";
+import {
+    Plus,
+    X,
+    ArrowDownLeft,
+    ArrowUpRight,
+    ArrowLeftRight,
+} from "lucide-react";
 import { useState } from "react";
 
 export default function FloatingActionButton() {
@@ -20,7 +26,19 @@ export default function FloatingActionButton() {
     ];
 
     return (
-        <div className="fixed bottom-24 right-6 lg:bottom-8 lg:right-8 z-50 flex flex-col items-end gap-3">
+        <div
+            className="
+                hidden
+                lg:flex
+                fixed
+                bottom-8
+                right-8
+                z-50
+                flex-col
+                items-end
+                gap-3
+            "
+        >
             {open && (
                 <div
                     className="rounded-3xl p-2 flex flex-col gap-1"
@@ -34,16 +52,16 @@ export default function FloatingActionButton() {
                         <button
                             key={label}
                             className="
-                flex
-                items-center
-                gap-3
-                rounded-2xl
-                px-4
-                py-3
-                transition-all
-                duration-200
-                hover:bg-white/[0.04]
-              "
+                                flex
+                                items-center
+                                gap-3
+                                rounded-2xl
+                                px-4
+                                py-3
+                                transition-all
+                                duration-200
+                                hover:bg-white/[0.04]
+                            "
                         >
                             <Icon
                                 size={17}
@@ -67,17 +85,17 @@ export default function FloatingActionButton() {
             <button
                 onClick={() => setOpen(!open)}
                 className="
-            h-14
-            w-14
-            rounded-full
-            flex
-            items-center
-            justify-center
-            transition-all
-            duration-300
-            hover:scale-105
-            active:scale-95
-        "
+                    h-14
+                    w-14
+                    rounded-full
+                    flex
+                    items-center
+                    justify-center
+                    transition-all
+                    duration-300
+                    hover:scale-105
+                    active:scale-95
+                "
                 style={{
                     background: "#FF5C00",
                     boxShadow: "0 8px 24px rgba(255,92,0,.18)",

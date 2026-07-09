@@ -27,11 +27,17 @@ export default function DashboardHero() {
                 </p>
 
                 <h2
-                    className="mt-3 text-white leading-none"
+                    className="
+                        mt-3
+                        text-white
+                        leading-none
+                        text-[2.6rem]
+                        sm:text-[3.4rem]
+                        lg:text-[5.2rem]
+                    "
                     style={{
                         fontFamily: "var(--font-heading)",
                         fontWeight: 700,
-                        fontSize: "clamp(56px,7vw,82px)",
                         letterSpacing: "-0.05em",
                     }}
                 >
@@ -52,11 +58,24 @@ export default function DashboardHero() {
                 </p>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-4">
+            <div
+                className="
+                    mt-8
+                    lg:mt-12
+                    flex
+                    flex-col
+                    gap-3
+                    sm:flex-row
+                    sm:flex-wrap
+                "
+            >
                 <button
                     className="
+                        w-full
+                        sm:w-auto
                         flex
                         items-center
+                        justify-center
                         gap-2
                         rounded-2xl
                         px-5
@@ -78,8 +97,11 @@ export default function DashboardHero() {
 
                 <button
                     className="
+                        w-full
+                        sm:w-auto
                         flex
                         items-center
+                        justify-center
                         gap-2
                         rounded-2xl
                         px-5
@@ -102,8 +124,11 @@ export default function DashboardHero() {
 
                 <button
                     className="
+                        w-full
+                        sm:w-auto
                         flex
                         items-center
+                        justify-center
                         gap-2
                         rounded-2xl
                         px-5

@@ -23,7 +23,7 @@ export default function ActivityPage() {
             <Sidebar />
 
             <main className="flex-1 overflow-y-auto">
-                <div className="mx-auto w-full max-w-[900px] px-6 py-8 lg:px-10 lg:py-10">
+                <div className="mx-auto w-full max-w-[1400px] px-6 py-8 pb-40 lg:px-10 lg:py-10 lg:pb-10">
 
                     {/* Header móvil */}
                     <div className="mb-8 flex items-center justify-between lg:hidden">

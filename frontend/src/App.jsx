@@ -14,6 +14,8 @@ import OnboardingAccount from "./pages/OnboardingAccount";
 import OnboardingIncome from "./pages/OnboardingIncome";
 import OnboardingExpense from "./pages/OnboardingExpense";
 
+import BudgetsPage from "./pages/BudgetsPage";
+
 import TypographyLab from "./pages/TypographyLab";
 
 export default function App() {
@@ -21,6 +23,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/budgets" element={<BudgetsPage />} />
 
         {/* AUTH */}
         <Route path="/login" element={<Login />} />
